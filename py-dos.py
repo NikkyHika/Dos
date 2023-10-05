@@ -71,9 +71,9 @@ os.system('cls')
 os.chdir("D:/")
 while True:
     c = input(os.getcwd() + " ")
-    if c  == "clr":
+    if c  == "clr": #команда очистки экрана
         os.system('cls')
-    elif c == "dir":
+    elif c == "dir": #команда что показывает файлы и папки в директории
         print()
         listdir = os.listdir()
         index = 0
@@ -81,27 +81,27 @@ while True:
             print(os.getcwd() + "/" + listdir[index])
             index = index+1
         print()
-    elif c == "crdir":
+    elif c == "crdir": #команда чтобы создать файл
         dirs = input("dir adress example: D:/py_dos_folder/py_dos_folder_number2 ")
         os.makedirs(dirs)
-    elif c == "opnfile":
+    elif c == "opnfile": #команда чтобы посмотреть содержимое файла
         file = input("file adress example: D:/Users/Desktop/py-dos.py ")
         print()
         openFl = open(file, 'r')
         print(openFl.read())
         print()
-    elif c == "chdir":
+    elif c == "chdir": #команда чтобы изменить директорию
         dirO = input("dir adress example: D:/Program Files (x86) ")
         os.chdir(dirO)
-    elif c == "exdir":
+    elif c == "exdir": #команда чтобы выйти из директории
         os.chdir("..")
-    elif c == "dltfile":
+    elif c == "dltfile": #команда чтобы удалить файл
             dltfile = input("file adress example: D:/Users/Desktop/py-dos.py ")
             os.remove(dltfile)
-    elif c == "dltdir":
+    elif c == "dltdir":  #команда чтобы удалить папку
         dltdir = input("dir adress example: D:/py_dos_folder/py_dos_folder_number2 ")
         os.removedirs(dltdir)
-    elif c == "edtfile":
+    elif c == "edtfile": #команда чтобы изменить содержимое файла
         file = input("file adress example: D:/Users/Desktop/py-dos.py ")
         print()
         openFl = open(file, 'r')
@@ -110,7 +110,7 @@ while True:
         openFl = open(file, 'w')
         file = input("edit ")
         openFl.write(file)
-    elif c == "help":
+    elif c == "help": #команда чтобы посмотреть все команды
         print()
         print("clr - clear the terminal")
         print("dir - files&folders in directory")
@@ -123,7 +123,7 @@ while True:
         print("edtfile - edit file")
         print("crfile - create file")
         print()
-    elif c == "crfile":
+    elif c == "crfile": #команда чтобы создать файл
         crfile = input("file adress example: D:/Users/Desktop/py-dos.py ")
         newfile = open(crfile, 'w')
         newfile.write("new file")
