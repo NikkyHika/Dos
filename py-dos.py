@@ -95,7 +95,7 @@ while True:
         os.chdir(dirO)
     elif c == "exdir": #команда чтобы выйти из директории
         os.chdir("..")
-    elif c == "dltfile": #команда чтобы удалить файл
+    elif c == "dltfile": #команда чтобы удалить папку
             dltfile = input("file adress example: D:/Users/Desktop/py-dos.py ")
             os.remove(dltfile)
     elif c == "dltdir":  #команда чтобы удалить папку
